@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/get_core.dart';
 import 'package:getx_student_db/components/common/snackbar.dart';
 import 'package:getx_student_db/components/common/text_widget_common.dart';
 import 'package:getx_student_db/constants/colors/colors.dart';
@@ -39,6 +40,7 @@ void deleteAlertDialog({required BuildContext context,required int? userId, requ
                       controller.getAllStudentDetails();
                       getxSnackBar(title: "Deleted", message: "Data Successfully Deleted",);
                     }
+                    Get.back();
                     controller.getAllStudentDetails();
                   },
                   child: TextWidgetCommon(
