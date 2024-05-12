@@ -24,8 +24,6 @@ class EditStudentProfilePage extends StatelessWidget {
 
   EditStudentController editStudentController =
       Get.put(EditStudentController());
-
-  // File? studentImage;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

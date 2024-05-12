@@ -11,7 +11,7 @@ import 'package:getx_student_db/views/add_edit/edit_student_page.dart';
 import 'package:getx_student_db/views/profile/student_profile_page.dart';
 
 class HomePage extends StatelessWidget {
-   HomePage({super.key});
+  HomePage({super.key});
 
   HomeController homeController = Get.put(HomeController());
 
@@ -149,14 +149,14 @@ class HomePage extends StatelessWidget {
                                         homeController.studentDataList[index],
                                   );
                                   Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          EditStudentProfilePage(
+                                    MaterialPageRoute(builder: (context) {
+                                      controller.studentImage.value = null;
+                                      return EditStudentProfilePage(
                                         homeController: homeController,
                                         studentModel: homeController
                                             .studentDataList[index],
-                                      ),
-                                    ),
+                                      );
+                                    }),
                                   );
                                 },
                                 icon: Icon(
